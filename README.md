@@ -8,6 +8,7 @@ token = '...' # insert your 36 character token
 bounds = [-135, -123, 46, 56] # [min longitude, max longitude, min latitude, max laitude] - e.g. constrain search to the NE Pacific (west coast of Vancouver Island)
 dateFrom = '2021-01-01T00:00:00.000Z' # start date timestamp
 dateTo = '2022-12-31T23:59:59.000Z' # end date timestamp
+extension = 'csv' # data files to retrieve; other common extensions are "nc", "mp4", "mat", "txt"
 ```
 
 ### 2. Initialize server connection to Oceans 3.0 first
