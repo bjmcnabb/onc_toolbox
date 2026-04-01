@@ -3,8 +3,8 @@ This repository provides Python scripts built on Ocean Networks Canada API to se
 <p>&nbsp;  </p>
 </div>
 
-Example use case (see "toolbox_example.py"):
-Define the user ID and search parameters
+###Example use case (see "toolbox_example.py"):
+#Define the user ID and search parameters
 ```
 outPath = r'C:/.../ONC_data/' # choose output directory
 token = '...' # insert your 36 character token
