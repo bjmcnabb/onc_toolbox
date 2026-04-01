@@ -19,7 +19,7 @@ extension = 'csv' # data filetype to retrieve; other common extensions are "nc",
 ```
 server = onc_toolbox(token=token, outPath=outPath)
 ```
-### 3. Get list of available ocean properties
+### 3. Define a list of ocean properties to search by
 This toolbox is designed to search by specific ocean properties, so define a list of properties to search by:
 ```
 properties = [
