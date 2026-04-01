@@ -59,7 +59,7 @@ for prop_ in devices.keys():
                                                     )
 ```
 
-Device locations can also be visualized using the `map_selected_devices` function, which produces a Cartopy map showing the locations of the filtered devices:
+Device locations can also be visualized using the `map_selected_devices` function, which produces a Cartopy map:
 ```
 for prop_ in devices.keys():
     fig, ax = server.map_selected_devices(all_devices=devices[prop_],
