@@ -10,7 +10,7 @@ dateFrom = '2021-01-01T00:00:00.000Z' # start date timestamp
 dateTo = '2022-12-31T23:59:59.000Z' # end date timestamp
 ```
 
-### Initialize server connection to Oceans 3.0 first
+#### Initialize server connection to Oceans 3.0 first
 ```
 server = onc_toolbox(token=token, outPath=outPath)
 ```
