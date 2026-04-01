@@ -33,7 +33,8 @@ props, prop_details = server.get_properties(
     )
 ```
 
-#### 4. Since Oceans 3.0 only allows one property search at a time, iterate to return "devices" (instruments) by property inside a dict:
+#### 4. Find the available datasets by property
+Since Oceans 3.0 only allows one property search at a time, iterate to return "devices" (instruments) by property inside a dict:
 ```
 devices = {}
 print('\nretrieving devices...')
@@ -42,7 +43,7 @@ for prop_ in properties:
     devices[prop_] = server.get_devices(params=params)
 ```
 
-#### 5. Users can optionally further narrow the list of devices down by supplying geographic bounds or even a custom bounding polygon:
+Users can optionally further narrow the list of devices down by supplying geographic bounds or even a custom bounding polygon:
 ```
 selected_devices = {}
 for prop_ in devices.keys():
@@ -52,7 +53,7 @@ for prop_ in devices.keys():
                                                     )
 ```
 
-#### 6. Finally, device locations can be visualized using a Cartopy map:
+Finally, device locations can also be visualized using the `map_selected_devices` function, which produces a Cartopy map:
 ```
 for prop_ in devices.keys():
     fig, ax = server.map_selected_devices(all_devices=devices[prop_],
