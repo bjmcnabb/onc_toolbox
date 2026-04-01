@@ -69,6 +69,7 @@ for prop_ in devices.keys():
 ```
 
 ### 5. Finally, order a data product containing the selected devices
+```
 server.order_data(selected_devices=selected_devices, # or devices, to return all available devices found for a property
                   dateFrom=dateFrom,
                   dateTo=dateTo,
@@ -77,3 +78,4 @@ server.order_data(selected_devices=selected_devices, # or devices, to return all
                   extension=extension,
                   use_subfolders=True,
                   )
+```
