@@ -1,6 +1,6 @@
 This repository provides Python scripts to:
-1) search for available instrument deployments on Ocean Networks Canada (ONC) Oceans 3.0 database by ocean properties (e.g 'salinity'), and
-2) order data products from the Oceans 3.0 server containing those properties. 
+1) Search for available instrument deployments on Ocean Networks Canada (ONC) Oceans 3.0 database by ocean properties (e.g 'salinity').
+2) Order data products from the Oceans 3.0 server containing those properties. 
 
 This toolbox allows the user to search for instrument deployments for a given time range and geographic extent, using property keywords (e.g. "salinity") or partial keywords (e.g. "sal"). Users can additionally define a polygon of geogrpahic coordiantes to further restrict the search area. Data orders will also automatically generate a metadata csv file, and the `write_shp` function can be run to subsequently generate shapefiles for metadata input into GIS software. 
 
