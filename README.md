@@ -1,7 +1,7 @@
 This repository provides Python scripts built on Ocean Networks Canada API to search for available devices by property and order data products from the Oceans 3.0 server. This toolbox of functions allows the user to search the Oceans 3.0 database to find instrument deployments for a given time range and geographic extent using property keywords (e.g. "salinity") or partial keywords (e.g. "sal"). Users can additionally define a polygon of geogrpahic coordiantes to further restrict the search area. Data orders will also automatically generate a metadata csv file, and the "write_shp" function can be run to subsequently generate shapefiles for metadata input into GIS software. 
 
 ## Example use case (see "toolbox_example.py"):
-#### 1. Define the user ID and search parameters
+### 1. Define the user ID and search parameters
 ```
 outPath = r'C:/.../ONC_data/' # choose output directory
 token = '...' # insert your 36 character token
@@ -10,11 +10,11 @@ dateFrom = '2021-01-01T00:00:00.000Z' # start date timestamp
 dateTo = '2022-12-31T23:59:59.000Z' # end date timestamp
 ```
 
-#### 2. Initialize server connection to Oceans 3.0 first
+### 2. Initialize server connection to Oceans 3.0 first
 ```
 server = onc_toolbox(token=token, outPath=outPath)
 ```
-#### 3. Get list of available ocean properties
+### 3. Get list of available ocean properties
 This toolbox is designed to search by specific ocean properties, so define a list of properties to search by:
 ```
 properties = [
@@ -33,7 +33,7 @@ props, prop_details = server.get_properties(
     )
 ```
 
-#### 4. Find the available datasets by property
+### 4. Find the available datasets by property
 Since Oceans 3.0 only allows one property search at a time, iterate to return "devices" (instruments) by property inside a dict:
 ```
 devices = {}
@@ -62,7 +62,7 @@ for prop_ in devices.keys():
     ax.set_title(f'property: {prop_}')
 ```
 
-#### 5. Finally, order a data product containing the selected devices
+### 5. Finally, order a data product containing the selected devices
 server.order_data(selected_devices=selected_devices, # or devices, to return all available devices found for a property
                   dateFrom=dateFrom,
                   dateTo=dateTo,
