@@ -31,7 +31,7 @@ properties = [
 ]
 ```
 
-If unsure what properties are available on Oceans 3.0, the `get_properties` funtion will retrieve a list of available properties. Users can narrow the retrieved list down by supplying a list of keywords or partial matches to filter by with the `prop_keyword` attribute (e.g. 'sal' for 'salinity'):
+If unsure what properties are available on Oceans 3.0, the `get_properties` funtion will retrieve a list of available properties. Users can narrow the retrieved list down by supplying a list of keywords (or partial matches) to filter by with the `prop_keyword` attribute (e.g. 'sal' for 'salinity'):
 ```
 props, prop_details = server.get_properties(
     # prop_keyword=prop_keyword, # optional - filter results by keyword
