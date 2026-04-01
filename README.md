@@ -69,7 +69,7 @@ for prop_ in devices.keys():
 ```
 
 ### 5. Finally, order a data product containing the selected devices
-The following will download the datasets to the user-specified subfolder.
+The following will download the datasets to the user-specified subfolder:
 ```
 server.order_data(selected_devices=selected_devices, # or devices, to return all available devices found for a property
                   dateFrom=dateFrom,
