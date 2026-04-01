@@ -37,7 +37,7 @@ props, prop_details = server.get_properties(
     # prop_keyword=prop_keyword, # optional - filter results by keyword
     )
 ```
-`prop` will return a Pandas Series containing the names of property names, and `prop_details` will provide a Pandas DataFrame containing metadata for each property.
+`prop` will return a Pandas Series containing the all property names on the Oceans 3.0 server, and `prop_details` will provide a Pandas DataFrame containing metadata for each property.
 
 ### 4. Find the available datasets by property
 Since Oceans 3.0 only allows one property search at a time, iterate to return "devices" (instruments) by property inside a dict:
