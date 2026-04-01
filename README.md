@@ -53,7 +53,7 @@ for prop_ in devices.keys():
                                                     )
 ```
 
-Finally, device locations can also be visualized using the `map_selected_devices` function, which produces a Cartopy map:
+Device locations can also be visualized using the `map_selected_devices` function, which produces a Cartopy scatterplot map:
 ```
 for prop_ in devices.keys():
     fig, ax = server.map_selected_devices(all_devices=devices[prop_],
@@ -62,3 +62,12 @@ for prop_ in devices.keys():
     ax.set_title(f'property: {prop_}')
 ```
 
+#### 5. Finally, order a data product containing the selected devices
+server.order_data(selected_devices=selected_devices, # or devices, to return all available devices found for a property
+                  dateFrom=dateFrom,
+                  dateTo=dateTo,
+                  token=token,
+                  # device_keyword=device_keyword,
+                  extension=extension,
+                  use_subfolders=True,
+                  )
